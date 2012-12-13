@@ -22,7 +22,7 @@ exports.for = function(API, plugin) {
 	}
 
 
-	plugin.fix = function(node, options) {
+	plugin.save = function(node, options) {
 		return findStreePath().then(function(streePath) {
 			return API.OS.exec(streePath + " " + node.path);
 		});
